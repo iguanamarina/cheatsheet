@@ -1,6 +1,3 @@
-
-\clearpage
-
 # PAQUETES DE R
 
 ## Bookmarkr:
