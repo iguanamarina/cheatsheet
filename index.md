@@ -1,18 +1,3 @@
----
-title: "R - Una Guía de Bolsillo"
-subtitle: "Guía con paquetes útiles de R, tasks, funciones, códigos ejemplo, y demás utensilios de primera mano a la hora de trabajar con R"
-author: "Juan A. Arias"
-date: "24/9/2020"
-output: rmdformats::readthedown
-    # pdf_document:
-    #   toc: yes
-    #   toc_depth: 3
-    #   number_sections: true
-    # html_document:
-    #   toc: yes
-    #   toc_depth: 3
-    #   theme: united
----
 
 \clearpage
 
