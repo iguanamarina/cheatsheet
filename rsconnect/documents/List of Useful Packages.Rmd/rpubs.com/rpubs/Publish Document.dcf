@@ -1,0 +1,10 @@
+name: Publish Document
+title:
+username:
+account: rpubs
+server: rpubs.com
+hostUrl: rpubs.com
+appId: https://api.rpubs.com/api/v1/document/668901/5686ce5b9f6b420faa9114cc2dd5eb21
+bundleId: https://api.rpubs.com/api/v1/document/668901/5686ce5b9f6b420faa9114cc2dd5eb21
+url: http://rpubs.com/iguanamarina/668901
+when: 1608035447.42225

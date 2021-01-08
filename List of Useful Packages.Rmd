@@ -74,10 +74,9 @@ df[sample(nrow(df), 15), ]
 
 ## Dibujar un cerebro y diferentes zonas resaltadas
 
-
 ### Preámbulo:
 
-```{r}
+```{r eval=FALSE}
 # install.packages(c("rgl","misc3d","neurobase"))
 library(rgl);library(misc3d);library(neurobase)
 
@@ -94,10 +93,9 @@ if (!requireNamespace("MNITemplate")) {
 }
 ```
 
-
 ### Asignación y ver posibles regiones:
 
-```{r}
+```{r eval=FALSE}
 img = aal_image()
 template = readMNI(res = "2mm")
 cut <- 4500
@@ -107,10 +105,9 @@ labs = aal_get_labels()
 #View(labs)
 ```
 
-
 ### Hipocampo (L y R), lóbulo parietal (completo) y lóbulo temporal (completo):
 
-```{r}
+```{r eval=FALSE}
 # Pick the region of the brain you would like to highlight
 
 hippocampusL = labs$index[grep("Hippocampus_L", labs$name)]
@@ -151,10 +148,9 @@ mask15 = remake_img(vec = img %in% Temporal_Sup_L, img = img)
 mask16 = remake_img(vec = img %in% Temporal_Sup_R, img = img)
 ```
 
-
 ### Representación gráfica per se:
 
-```{r}
+```{r eval=FALSE}
 ### this would be the ``activation'' or surface you want to render 
 contour3d(template, x=1:dtemp[1], y=1:dtemp[2], z=1:dtemp[3], level = cut, alpha = 0.4, draw = TRUE)
 contour3d(mask, level = c(0.5), alpha = c(0.7), add = TRUE, color=c("red") )
@@ -177,14 +173,12 @@ contour3d(mask16, level = c(0.5), alpha = c(0.3), add = TRUE, color=c("blue") )
 
 ### Añadir texto:
 
-```{r}
+```{r eval=FALSE}
 ### add text
 text3d(x=dtemp[1]/2, y=dtemp[2]/2, z = dtemp[3]*0.98, text="Top")
 text3d(x=-0.98, y=dtemp[2]/2, z = dtemp[3]/2, text="Left")
 rglwidget()
 ```
-
-
 
 # FUNCIONES DE GRAN UTILIDAD
 
