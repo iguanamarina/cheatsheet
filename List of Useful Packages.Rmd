@@ -16,6 +16,12 @@ output: rmdformats::readthedown
 
 \clearpage
 
+```{r}
+
+knitr::opts_chunk$set(echo=TRUE, eval=FALSE) # set multiple global options 
+
+```
+
 # PAQUETES DE R
 
 ## Bookmarkr:
@@ -29,6 +35,19 @@ install.packages("devtools")
 library(devtools)
 devtools::install_github("jmcphers/bookmarkr")
 library(bookmarkr)
+```
+
+## UNIX:
+
+Para aumentar la memoria disponible por R en sistemas operativos Linux:
+
+```{r}
+
+install.packages("unix")
+library(unix)
+rlimit_as(1e12)  #increases to ~12GB
+rlimit_all()
+
 ```
 
 # OBJETIVOS Y USOS EN R
